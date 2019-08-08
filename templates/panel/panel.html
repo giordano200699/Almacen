@@ -5,26 +5,31 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-	
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	  <a class="navbar-brand" href="#">{{session['nombreAdministrador']}}</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+
+	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	    <ul class="navbar-nav mr-auto">
+	      <li class="nav-item active">
+	        <a class="nav-link" href="#">Crear Stand</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="#">Ver Stands</a>
+	      </li>
+	    </ul>
+	    <form action="logout" method="post" class="form-inline my-2 my-lg-0">
+	      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Cerrar Sesión</button>
+	    </form>
+	  </div>
+	</nav>
 
 	<main class="container">
 		<div class="row">
 			<div class="offset-md-3 col-md-6" style="margin-top:100px;">
 				<h1 style="text-align:center; margin-bottom: 20px;">Almacén</h1>
-				<form action="panel" method="post">
-				  <div class="form-group">
-				    <label for="nombreAdministrador">Administrador</label>
-				    <input type="text" class="form-control" id="nombreAdministrador" name="nombreAdministrador" placeholder="Administrador">
-				  </div>
-				  <div class="form-group">
-				    <label for="clave">Clave</label>
-				    <input type="password" class="form-control" id="clave" placeholder="Clave" name="clave">
-				    <small id="claveInfo" class="form-text text-muted">La clave es una parte importante en la seguridad.</small>
-				  </div>
-				  <div style="text-align: center;">
-				  	<button type="submit" class="btn btn-primary">Enviar Datos</button>
-				  </div>
-				</form>
 			</div>
 		</div>
 	</main>
